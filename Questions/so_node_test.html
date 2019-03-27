@@ -1,0 +1,154 @@
+<div>
+<p><img src="http://static.scheduleonce.com/Images/newsiteImages/logo2x.png?width=180&amp;height=48" title="ScheduleOnce"></p>
+
+<h1>Node Interview Excercises</h1>
+<p>For these take home exercises you will be asked to write a few short programs and answer a simple question.</p>
+<p>Place all relevant files in a <code>.zip</code> file named <code>[your name]_so_node_test.zip</code>, and include a <code>README.md</code> file which explains how to run the programs, what is required to run the programs, how to run the unit tests and any other relevant information.</p>
+<p>You may use any resources to answer finish these taks, but all code and answers must be your own.</p>
+<ol>
+<li> <a href='#marcopolo'>The Marco Polo Game</a></li>
+<li> <a href='#question'>A Simple Question about NodeJs</a></li>
+<li> <a href='#userstory'>Implementing a User Story</a></li>
+</ol>
+<br>
+<br>
+<a name='marcopolo'/>
+<h2>Marco Polo Instructions</h2>
+<p> In the old city of Venice it was important for children to be good at math so they could grow up to be great merchants. One way for the children of Venice to practice their math skills was to play a game called Marco Polo, named after the great explorer from Venice. </p>
+The game is simple.
+<p>The children sit around in a circle and count the numbers from 1 to 100. However, every time the number that a child is supposed to say is divisible by 4, the child says 'marco' instead of the number. Every time the number is divisible by 7, the child says 'polo' instead of the number. If the number is divisible by both 4 and 7, the child will say 'marcopolo'.</p>
+<h3>Goal</h3>
+<p><strong>Your task is to write a web service that will print out all the correct answers for this game from 1 to 1,000,000 with 1,000 numbers per line. The Web service must be written in a way which will allow multiple users to access the service at the same time without receiving any errors or having a long delay.</strong></p>
+<h4>Expected Output</h4>
+<p>When executed, your function should print 1,000 lines of answers for all the numbers from 1 to 1,000,000.</p>
+<p>You may use the following output as the expected result for numbers 1 to 30 for your unit test.</p>
+<samp>
+1,2,3,marco,5,6,polo,marco,9,10,11,marco,13,polo,15,marco,17,18,19,marco,polo,22,23,marco,25,26,27,marcopolo,29,30
+</samp>
+<p>Your unit tests should also demonstrate that two or three users can access the api at the same time without any problem.</p>
+<br>
+<br>
+<a name='question'/>
+<h2>Simple NodeJs Question</h2>
+<p>Include in your <code>README.md</code> file the answer the following question:</p>
+<strong>When is it a good idea to not use NodeJs? Why?</strong>
+
+<br>
+<br>
+<a name='userstory'/>
+<h2>User Story Instructions:</h2>
+
+<p>The following exercise has one user story to implement. Your goal is to have a working node service that implements the use case.</p>
+
+<p>You can assume the input is valid. You don&#39;t need to handle unexpected characters or invalid spacing in the input file.</p>
+
+<h3>Guidelines:</h3>
+
+<p>We are looking for:</p>
+
+<ul>
+<li>A Node.js app.</li>
+<li>Working code.</li>
+<li>Readable code.</li>
+<li>Well designed code (Object Oriented).</li>
+<li>Simple code.</li>
+<li>Unit Tests.</li>
+</ul>
+
+
+<p>Keep your code simple, don't over engineer. Good luck!</p>
+
+<h3>User Story 1 - Parse invoice numbers</h3>
+
+<p>We have recently decided to digitise our old invoice archives. Since finding a
+volunteer for such an arduous task was impossible, an employee was selected at
+random and instructed to type in all invoice numbers into a text file.</p>
+
+<p>Little did we know that the employee we picked is an aspiring ASCII artist.
+Instead of handing us a file containing a set of numbers, we ended up with
+7-segment display representations of the invoice numbers.</p>
+
+<p>This is where you come in. Write a simple node service that allows the user to upload a text file of 7-segment invoice numbers, and outputs a list with the parsed invoice numbers.</p>
+
+<p><strong>Input:</strong></p>
+
+<ul>
+<li><p>A text file containing several hundreds of invoice numbers in the following
+form:</p>
+
+<pre><code>      _  _     _  _  _  _  _  (line 1)
+    | _| _||_||_ |_   ||_||_| (line 2)
+    ||_  _|  | _||_|  ||_| _| (line 3)
+                              (line 4)
+      _  _  _  _  _  _     _  (line 5)
+  |_||_|| ||_||_   |  |  ||_  (line 6)
+    | _||_||_||_|  |  |  | _| (line 7)
+                              (line 8)
+</code></pre>
+
+<p>  <strong>Invoice number format:</strong></p>
+
+<ul>
+<li>Each invoice number is constructed of 9 digits [0..9]</li>
+<li>Invoice number is written using _ and | characters.</li>
+<li>Invoice number input takes 4 lines.</li>
+<li>The first 3 lines contain 27 characters.</li>
+<li>The fourth line is blank.</li>
+</ul>
+
+
+<p>  <strong>Note:</strong> You can use <code>input_user_story_1.txt</code> to feed your program.</p></li>
+</ul>
+
+
+<p><strong>Output:</strong></p>
+
+<ul>
+<li><p>A text file with the parsed invoice numbers. One number per row.</p>
+
+<p>  Example:</p>
+
+<pre><code>  123456789
+  490867715
+</code></pre>
+
+<p>  <strong>Note:</strong> You can use <code>output_user_story_1.txt</code> to test that the output file generated by your program is correct.</p></li>
+</ul>
+<h3>User Story 2 - Top Secret</h3>
+
+<p>During your in-person interview, you will be asked to modify your code to handle User Story 2. So be sure your code can be easily modified. More details will be given during the interview.</p>
+
+<p><strong>Input:</strong></p>
+
+<ul>
+<li>
+<p>  Example:</p>
+
+<pre><code>
+      _  _     _  _  _  _  _  (line 1)
+    | _| _||_||_ |_   ||_||_| (line 2)
+    ||_  _|  | _||_|  ||_| _| (line 3)
+                              (line 4)
+      _  _  _  _  _  _     _  (line 5)
+  |_||_|| ||_||    |  |  ||_  (line 6)
+    | _||_||_||_|  |     | _| (line 7)
+                              (line 8)
+</code></pre>
+
+</li>
+</ul>
+
+<p><strong>Output:</strong></p>
+
+<ul>
+<li>
+<p>  Example:</p>
+
+<pre><code>
+  123456789
+  4908?7?15 ILLEGAL
+</code></pre>
+
+</li>
+</ul>
+</div>
